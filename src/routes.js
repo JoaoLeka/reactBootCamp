@@ -1,0 +1,27 @@
+import React from "react";
+import {
+    BrowserRouter,
+    Routes,
+    Route 
+} from "react-router-dom";
+
+import Musicas from "./pages/Musicas";
+import Adicionar from "./pages/Adicionar";
+import NotFound from "./pages/NotFound";
+import Index from "./pages/index";
+
+function Rotas() {
+    return (
+        <BrowserRouter>
+            <Routes>
+            <Route path="/musicas" element={<Musicas />} />
+            <Route path="/adicionar" element={<Adicionar />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<Index />} />
+
+            </Routes>
+        </BrowserRouter>
+    )
+}
+
+export default Rotas;
